@@ -12,7 +12,7 @@ fn main() {
         .nth(1)
         .expect("publish_post requires a post id")
         .parse::<i32>()
-        .expect("Infalid ID");
+        .expect("Invalid ID");
     let connection = &mut establish_connection();
 
     let post = diesel::update(posts.find(id))
